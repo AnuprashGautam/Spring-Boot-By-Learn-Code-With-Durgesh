@@ -1,6 +1,5 @@
-@PostMapping("/books")
-public Book addBook(@RequestBody Book book)
+@DeleteMapping("/books/{id}")
+public void deleteBook(@PathVariable("id")int id)
 {
-    Book b=this.bookService.addBook(book);
-    return b;
+    this.bookService.deleteBook(id);
 }
