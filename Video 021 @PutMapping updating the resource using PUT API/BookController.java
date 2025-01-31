@@ -1,4 +1,4 @@
 @PutMapping("/books/{id}")
-public Book updatBook(@RequestBody Book book, @PathVariable("id") int bookId) {
-    return this.bookService.updatBook(book, bookId);
+public void updatBook(@RequestBody Book book, @PathVariable("id") int bookId) {
+    this.bookService.updatBook(book, bookId);
 }
