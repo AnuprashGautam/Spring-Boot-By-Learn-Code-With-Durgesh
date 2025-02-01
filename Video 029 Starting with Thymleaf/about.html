@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>about</title>
+</head>
+<body>
+    <h1>Hello, welcome to About page:</h1>
+    <h2>My name is <span th:text="${#strings.toUpperCase(name)}"></span></h2>
+    <p>The lehgth of my name is <span th:text="${#strings.length(name)}"></span></p>
+    <h2>Todays date is <span th:text="${currentDate}"></span></h2>
+    
+    <div th:with="a=10,b=20,name=${name}">
+    	<h2>The value of a is <span th:text="${a}"></span></h2>
+    	<h2>The value of b is <span th:text="${b}"></span></h2>
+    	<h2 th:text="'The sum of '+${a}+' and '+${b}+' is '+${a+b}"></h2>
+    	<h2>The variable name contains <span th:text="${name}"></span></h2>
+    	
+    	<h2>My name is <span th:text="${name}"></span>.</h2>
+    	<h2 th:text="'My name is '+${name}+'.'"></h2>
+    	
+    </div>
+</body>
+</html>
