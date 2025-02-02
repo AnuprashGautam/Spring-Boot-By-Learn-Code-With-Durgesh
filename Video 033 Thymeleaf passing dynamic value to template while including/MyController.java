@@ -18,7 +18,8 @@ public class MyController {
 		// Sending dynamic data to the service and then to footer.
 		
 		model.addAttribute("title","This is title from controller.");
-		model.addAttribute("subTitle","This is sub title form controller.");
+		// model.addAttribute("subTitle","This is sub title form controller.");
+		model.addAttribute("subTitle",LocalDateTime.now().toString());
 		
 		return "service";
 	}
