@@ -1,0 +1,6 @@
+// .formLogin(Customizer.withDefaults())  // Default Spring Security login form
+.formLogin(form -> form
+        .loginPage("/signin")   // Specify your custom login page URL
+        .permitAll()           // Allow all users to access the login page
+    )
+.build();
