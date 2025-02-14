@@ -1,0 +1,9 @@
+<tr th:each="c : ${contacts}">
+    <th scope="row" th:text="${'SCMUSER'+c.cId}"></th>
+    <td >
+        <a href="#" th:href="@{'/user/'+${c.cId}+'/contact'}">
+            <img src="" class="profile_photo" th:src="@{'/img/'+${c.image}}" alt="Profile photo" />
+            <span th:text="${c.name}+' ('+${c.secondName}+')'">Name and nickname</span>
+
+        </a>
+    </td>
