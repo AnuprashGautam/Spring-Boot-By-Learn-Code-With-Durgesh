@@ -1,3 +1,3 @@
 @ManyToOne()
-	@JsonIgnore
-	private User user;
+@JsonIgnore
+private User user;
